@@ -1,7 +1,13 @@
-Binaries
-DerivedDataCache
-Intermediate
-Saved
+#################################
+# ***************************** #
+# * Default created by Unreal * #
+# ***************************** #
+#################################
+
+Binaries/*
+DerivedDataCache/*
+Intermediate/*
+Saved/*
 *.VC.db
 *.opensdf
 *.opendb
@@ -10,3 +16,68 @@ Saved
 *.suo
 *.xcodeproj
 *.xcworkspace
+
+##########################################################
+# ****************************************************** #
+# * Additionals added using template provided by udemy * #
+# ****************************************************** #
+##########################################################
+
+# VS User specific files
+.vs/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.ipa
+
+# Precompiled Assets
+SourceArt/**/*.png
+SourceArt/**/*.tga
+
+# Builds
+Build/*
+
+# Whitelist PakBlacklist-<BuildConfiguration>.txt files
+!Build/*/
+Build/*/**
+!Build/*/PakBlacklist*.txt
+
+# Don't ignore icon files in Build
+!Build/**/*.ico
+
+# Built data for maps
+*_BuiltData.uasset
+
+###############################################
+# ******************************************* #
+# * Additionals from Unreal Course by udemy * #
+# ******************************************* #
+###############################################
+
+Content/StarterContent/
