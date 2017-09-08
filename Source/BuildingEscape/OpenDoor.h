@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 
 #include "Engine/World.h"
+#include "GameFramework/PlayerController.h"
 #include "GameFramework/Actor.h"
 #include "Engine/TriggerVolume.h"
 #include "Engine/LocalPlayer.h"
