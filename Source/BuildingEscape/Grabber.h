@@ -19,13 +19,18 @@ public:
 	// Sets default values for this component's properties
 	UGrabber();
 
+	// Called every frame
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	// Ray-cast and grab what's in reach
+	void Grab();
+
+	// release what is grabbed
+	void Release();
 
 private:
 	// Reach of ray trace
@@ -34,9 +39,9 @@ private:
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
 	UInputComponent* InputComponent = nullptr;
 
-	// Ray-cast and grab what's in reach
-	void Grab();
+	void FindPhysicsHandleComponent();
+	void SetupInputComponent();
 
-	// release what is grabbed
-	void Release();
+	// Return hit for first physics body in reach
+	const FHitResult GetFirstPhysicsBodyInReach();
 };
