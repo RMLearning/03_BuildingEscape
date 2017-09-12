@@ -2,12 +2,11 @@
 
 #pragma once
 
-#include "Engine/World.h"
-#include "GameFramework/PlayerController.h"
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "Grabber.generated.h"
 
+#include "Components/ActorComponent.h"
+
+#include "Grabber.generated.h"
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class BUILDINGESCAPE_API UGrabber : public UActorComponent
@@ -26,6 +25,8 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+private:
+	// Reach of ray trace
+	float Reach = 100.0f;
 	
 };
