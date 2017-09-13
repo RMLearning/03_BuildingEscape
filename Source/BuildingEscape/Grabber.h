@@ -26,7 +26,7 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	// Ray-cast and grab what's in reach
+	// Ray-cast to grab what's in reach
 	void Grab();
 
 	// release what is grabbed
@@ -39,9 +39,19 @@ private:
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
 	UInputComponent* InputComponent = nullptr;
 
+	// Find (assumed) attached physics handle
 	void FindPhysicsHandleComponent();
+
+	// Setup (assumed) attached input component
 	void SetupInputComponent();
 
 	// Return hit for first physics body in reach
 	const FHitResult GetFirstPhysicsBodyInReach();
+	
+	// Returns current start of reach line
+	FVector GetReachLineStart();
+	
+	// Returns current end of reach line
+	FVector GetReachLineEnd();
+
 };
