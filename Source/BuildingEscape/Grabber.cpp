@@ -73,11 +73,10 @@ void UGrabber::Grab()
 	auto ActorHit = HitResult.GetActor();
 	if (ActorHit)
 	{
-		PhysicsHandle->GrabComponentAtLocationWithRotation(
+		PhysicsHandle->GrabComponentAtLocation(
 			ComponentToGrab,
 			NAME_None,
-			ComponentToGrab->GetOwner()->GetActorLocation(),
-			ComponentToGrab->GetOwner()->GetActorRotation()
+			ComponentToGrab->GetOwner()->GetActorLocation()
 		);
 	}
 }
